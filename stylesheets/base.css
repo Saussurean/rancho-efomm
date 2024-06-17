@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Inter:700|Inter:400');
+
+:root {
+	--rcolor-roxo: hsl(321, 100%, 6%);
+	--rcolor-salmao: hsl(343, 100%, 74%);
+	--rcolor-rosinha: hsl(300, 100%, 87%);
+	--rcolor-verdinho: hsl(83, 52%, 56%);
+	--rcolor-gru: hsl(93, 5%, 66%);
+
+	/*--scolor-background: var(--rcolor-roxo);
+	--scolor-primary: var(--rcolor-salmao);
+	--scolor-secondary: var(--rcolor-rosinha);
+	--scolor-accent: var(--rcolor-verdinho);*/
+
+
+	--scolor-background: hsl(103.98deg, 100%, 6%);
+	--scolor-text: var(--rcolor-gru);
+}
+
+* { padding: 0; margin: 0; color: var(--scolor-text); }
+
+body {
+	--background-shade: color-mix(in hsl, var(--scolor-background) 60%, green);
+
+	background-image: linear-gradient(to left top, var(--scolor-background), var(--background-shade));
+
+	background-repeat: no-repeat;
+
+	font-family: 'Inter';
+	font-weight: 400;
+
+	width: 100vw;
+	height: 100vh;
+	box-sizing: border-box;
+}
+
+header h1 {
+	font-size: 5rem;
+	font-weight: bolder;
+}
+
+#site {
+	height: 100%;
+	width: 100%;
+}
+
+#site header {
+	
+	padding-top: 2em;
+}
+
+#mainbox {
+	/*display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;*/
+
+	width: 30%;
+	height: 40%;
+	background-color: color-mix(in srgb, var(--scolor-background), hsla(0, 0%, 0%, 0.75));
+
+	box-shadow: 0 0 10px 5px hsla(0, 0%, 0%, 0.2);
+}
+
+menu li {
+	background-color: color-mix(in srgb, var(--scolor-background), hsla(0, 100%, 100%, 0.5));
+	padding: 1em;
+	border-radius: 0.5em;
+	text-decoration: none;
+	transition: filter 0.5s;
+	cursor: pointer;
+	user-select: none;
+}
+
+menu li:hover {
+	filter: brightness(130%);
+}
+
+menu li:active {
+	filter: brightness(50%);
+}
+
+/* DISPLAY MADNESS */
+
+#site {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+#mainbox {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+#options {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 1em;
+	width: 100%;
+}
+
+#options li {
+	width: 50%;
+	display: block;
+	text-align: center;
+}

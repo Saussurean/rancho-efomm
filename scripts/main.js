@@ -2,4 +2,4 @@ function main() {
     alert("Carregado!");
 }
 
-document.onload = main;
+document.onreadystatechange = main;

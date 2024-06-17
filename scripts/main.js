@@ -1,5 +1,5 @@
 function main() {
-    alert("Carregado!");
+    //alert("Carregado!");
 }
 
 document.onreadystatechange = main;
